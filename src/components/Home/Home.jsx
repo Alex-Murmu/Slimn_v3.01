@@ -60,7 +60,7 @@ export default function Home() {
 
         try {
             setError(null);
-            const combinePrompt = prePrompt + prompt;
+            const combinedPrompt = prePrompt + prompt;
             const response = await query({ inputs: combinedPrompt });
             const imageURL = URL.createObjectURL(response);
             setOutput(imageURL);
