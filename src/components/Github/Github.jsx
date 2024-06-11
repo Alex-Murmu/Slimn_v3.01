@@ -43,7 +43,7 @@ export const githubInfoLoader = async () => {
         'https://api.github.com/users/mili-dhara',
         'https://api.github.com/users/Ander-z',
         'https://api.github.com/users/Nutan-Kumari-Marandi',
-        'https://api.github.com/users/yyx990803'
+        'https://api.github.com/users/Anuraj4103'
     ];
 
     // Fetch data for each URL
