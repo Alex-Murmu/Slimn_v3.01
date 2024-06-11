@@ -35,6 +35,7 @@ export default function Home() {
     const [output, setOutput] = useState(null);
     const [listening, setListening] = useState(false);
     const [error, setError] = useState(null);
+    const prePrompt = "by use pen pencil, no color, full, sketch, edges of object or outline ";
 
     // Speech recognition setup
     const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -59,7 +60,8 @@ export default function Home() {
 
         try {
             setError(null);
-            const response = await query({ inputs: prompt });
+            const combinePrompt = prePrompt + prompt;
+            const response = await query({ inputs: combinedPrompt });
             const imageURL = URL.createObjectURL(response);
             setOutput(imageURL);
         } catch (error) {
